@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extractor de Datos de Declaraciones Fiscales</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Extractor de Declaraciones Fiscales</h1>
+            <p>Procesamiento 100% local y privado de tus documentos fiscales</p>
+        </div>
+
+        <div class="main-content">
+            <div class="privacy-notice">
+                <h3>
+                    <span class="shield-icon"></span>
+                    Privacidad Garantizada
+                </h3>
+                <p>
+                    Todos tus documentos se procesan completamente en tu navegador.
+                    Ningún dato se envía a servidores externos. Tu información fiscal permanece 100% privada.
+                </p>
+            </div>
+
+            <div class="upload-section">
+                <div class="file-input-wrapper">
+                    <input type="file" id="pdfFile" class="file-input" accept=".pdf" />
+                    <label for="pdfFile" class="file-input-button">
+                        📄 Seleccionar PDF de Declaración
+                    </label>
+                </div>
+                <button id="processBtn" class="process-btn" disabled>
+                    🔍 Extraer Datos
+                </button>
+            </div>
+
+            <div id="status" class="status" style="display: none;"></div>
+
+            <div id="results" class="results-section">
+                <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">
+                    📊 Datos Extraídos de la Declaración
+                </h2>
+                <div class="data-grid" id="dataGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

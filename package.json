@@ -1,0 +1,44 @@
+{
+  "name": "extractor-declaraciones-fiscales",
+  "version": "1.0.0",
+  "description": "Extractor de datos de declaraciones fiscales - Aplicación portable para Mac",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac",
+    "dist": "electron-builder --mac --publish=never"
+  },
+  "author": "FELIPE",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.3.11",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.tuempresa.extractor-declaraciones",
+    "productName": "Extractor Declaraciones Fiscales",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.finance",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.icns"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "assets/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "keywords": []
+}
